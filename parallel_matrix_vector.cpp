@@ -37,10 +37,10 @@ main()
 #pragma omp for private(j)
         for (i = 0; i < SIZE; i++)
         {
-            printf("I'm thread %d in loop i = %d", omp_get_thread_num(), i);
+            // printf("I'm thread %d in loop i = %d\n", omp_get_thread_num(), i);
             for (j = 0; j < SIZE; j++)
             {
-                printf("I'm thread %d in loop j = %d", omp_get_thread_num(), i);
+                // printf("I'm thread %d in loop j = %d\n", omp_get_thread_num(), i);
                 c[i] += (A[i][j] * b[i]);
             }
 /* Update and display of running total must be serialized */
